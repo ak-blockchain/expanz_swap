@@ -1,0 +1,51 @@
+<head>
+    <title>eXpanz Swap</title>
+    <link href = "https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700" rel = "stylesheet" />
+    <link rel="stylesheet" href="styles.css"></link>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+</head>
+
+<body>
+
+    <div id="buyRect">
+        <div id="usdcRect" class="subRect top">
+            <h3 class="balance" id="usdcBalance">Balance: 0.00</h3>
+            <img class="tokenIcon" src="assets/usdc.png">
+            <h3 class="tokenText">USDC.e</h3>
+            <input placeholder="0.0" class="numberInput" id="usdcInput" oninput="onUsdcInputChange();" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46'/>
+        </div>
+
+        <img id="swapTriangle" src="assets/triangle.png" onclick="trianglePressed()"/>
+
+        <div id="expanzRect" class="subRect bottom">
+            <input placeholder="0.0" class="numberInput" id="xpanzInput" oninput="onXpanzInputChange();" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46'/>
+            <h3 class="balance" id="xpanzBalance">Balance: 0.00</h3>
+            <img class="tokenIcon" style="width: 22px; bottom: 9px; right: 67px;" src="assets/xpanz.png">
+            <h3 class="tokenText">XPANZ</h3>
+        </div>
+        
+        <button id="approveButton" class="subRect approve">
+            <h3 class="swapText">Approve</h3>
+        </button>
+
+        <button id="swapButton" class="subRect swap">
+            <h3 class="swapText" id="swapButtonText">Not Connected</h3>
+        </button>
+            <h4 id="errorMessage"></h4>
+            <h3 id="from">From</h3>
+            <h3 id="to" id="usdcBalance">To</h3>
+        
+        <button id="getReferralLnk" class="referralLink">
+            <h3 id="referralLinkText" >Generate Referral Link</h3>
+        </button>
+        
+    </div>
+        
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script src="dapp.js"></script>
+</body>
